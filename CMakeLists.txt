@@ -15,7 +15,9 @@ include_directories(3rd/glm)
 include_directories(3rd/glfw/include)
 link_directories(3rd/glfw/lib-arm64)
 
-add_executable(main 3rd/glad/src/glad.c main.cpp)
+add_executable(main 3rd/glad/src/glad.c src/main.cpp
+        src/shader.cpp
+        src/shader.h)
 
 # 目标链接库
 target_link_libraries(
